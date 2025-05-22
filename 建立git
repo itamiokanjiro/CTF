@@ -1,3 +1,21 @@
 git init
 git branch -m main
 echo "# My Project" > README.md
+git add .
+
+git commit -m "Init CTF"
+
+git config --global user.email "a234123234a@gmail.com"
+
+git push -u origin main
+
+git status        
+git log           
+git config --global init.defaultBranch main
+ssh-keygen -t ed25519 -C "a234123234a@gmail.com"
+cat ~/.ssh/id_ed25519.pub
+
+git rm -r --cached 跟CTF無關/
+
+git commit -m "刪除跟CTF無關"
+
