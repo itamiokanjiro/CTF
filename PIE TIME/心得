@@ -1,0 +1,9 @@
+133d
+12a7
+echo $((0x133d - 0x12a7))  # 9700 十進制
+150
+58beea76833d
+
+printf "0x%X\n" $((0x133d - 0x12a7))  # 0x25E4
+
+printf "0x%X\n" $((0x58beea76833d - 0x96))

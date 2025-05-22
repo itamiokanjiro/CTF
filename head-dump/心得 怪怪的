@@ -1,0 +1,15 @@
+
+curl -O -X 'GET' \
+  'http://verbal-sleep.picoctf.net:49884/heapdump' \
+  -H 'accept: */*'
+
+下載結束-O是下載
+使用 -O（保留原始檔名）
+使用 -o 指定自訂檔案名稱
+-X 是 curl 的選項，用來指定 HTTP 方法（request method），也就是你要對伺服器發出哪種請求，例如：
+
+方法	說明
+GET	取得資源（預設值）
+POST	傳送資料到伺服器
+PUT	更新資源（常用於 REST API）
+DELETE	刪除資源

@@ -1,0 +1,5 @@
+grep -ri "pico" ~/kok/CTF/Tab, Tab, Attack
+grep -ri "pico" "~/kok/CTF/Tab, Tab, Attack"
+grep -ri "pico" "$HOME/kok/CTF/Tab, Tab, Attack"
+grep -ria "pico" "$HOME/kok/CTF/Tab, Tab, Attack"
+

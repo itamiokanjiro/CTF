@@ -1,0 +1,73 @@
+dont-use-client-sideconst split = 4;
+
+// 亂序段字串陣列 (順序亂，無需知道字串內容)
+const scrambledSegments = [
+  'lz_b',   // scrambledSegments[0]
+  'no_c',   // scrambledSegments[1]
+  'CTF{',   // scrambledSegments[2]
+  'pico',   // scrambledSegments[3]
+  '706c',   // scrambledSegments[4]
+  '5}',     // scrambledSegments[5]
+  'ts_p',   // scrambledSegments[6]
+  'lien',   // scrambledSegments[7]
+];
+
+// 這是你知道的「正確段號 → scrambledSegments中對應的索引」映射
+// 例如，正確第0段是 scrambledSegments[3] ('pico')
+// 正確第1段是 scrambledSegments[2] ('CTF{')
+const orderMap = [3, 2, 1, 7, 6, 0, 4, 5];
+
+// 根據 orderMap 依序拿 scrambledSegments 裡對應段落，還原密碼
+function restorePassword(scrambled, order, split) {
+  let result = '';
+  for (let i = 0; i < order.length; i++) {
+    const idx = order[i];
+    result += scrambled[idx];
+  }
+  return result;
+}
+
+const recovered = restorePassword(scrambledSegments, orderMap, split);
+console.log('還原密碼:', recovered);
+
+///-------------------------------------------------------
+
+
+// 假設每段長度4
+const split = 4;
+
+// 亂序的密碼片段（你拿到的片段亂序）
+const scrambledSegments = [
+  'lz_b',   // 段 5
+  'no_c',   // 段 2
+  'CTF{',   // 段 1
+  'pico',   // 段 0
+  '706c',   // 段 6
+  '5}',     // 段 7
+  'ts_p',   // 段 4
+  'lien',   // 段 3
+];
+
+// 映射表：片段字串 → 正確段數索引
+const segmentOrder = {
+  'pico': 0,
+  'CTF{': 1,
+  'no_c': 2,
+  'lien': 3,
+  'ts_p': 4,
+  'lz_b': 5,
+  '706c': 6,
+  '5}': 7,
+};
+
+// 依照映射表排序，再組合還原
+function restorePassword(segments, orderMap) {
+  // 將 segments 按照 orderMap 裡的 index 排序
+  segments.sort((a, b) => orderMap[a] - orderMap[b]);
+
+  // 拼接成完整密碼
+  return segments.join('');
+}
+
+const recovered = restorePassword(scrambledSegments, segmentOrder);
+console.log('還原後密碼:', recovered);

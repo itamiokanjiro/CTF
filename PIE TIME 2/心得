@@ -1,0 +1,13 @@
+printf "0x%X\n" $((0x1400 - 0x136a))  # 0x25E4
+
+
+0x0000000000001400
+0x000000000000136a
+BA2AD3AB
+-0x96
+BA2AD441
+%X %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X
+%s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s 
+%p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p 
+多用 %X、%s、%p 掃堆疊位置：
+741EC36A

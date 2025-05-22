@@ -1,0 +1,3 @@
+grep -ria "pico" "$HOME/kok/CTF/Static ain't always noise"
+
+

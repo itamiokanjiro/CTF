@@ -1,0 +1,5 @@
+zsteg -a red.png > "zsteg$(date +'%Y%m%d_%H%MS').txt" 2>&1
+
+echo 'cGljb0NURntyM2RfMXNfdGgzX3VsdDFtNHQzX2N1cjNfZjByXzU0ZG4zNTVffQ==' | base64 -d
+ezF0X3c0cw==
+echo 'ezF0X3c0cw==' | base64 -d

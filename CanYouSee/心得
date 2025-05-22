@@ -1,0 +1,5 @@
+sudo apt install libimage-exiftool-perl
+exiftool ukn_reality.jpg
+exiftool CanYouSee/ukn_reality.jpg
+echo "cGljb0NURntNRTc0RDQ3QV9ISUREM05fZGVjYTA2ZmJ9Cg==" | base64 -d
+

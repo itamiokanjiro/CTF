@@ -1,0 +1,1 @@
+echo -n "a haunted house" | md5sum

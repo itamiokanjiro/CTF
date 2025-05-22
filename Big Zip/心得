@@ -1,0 +1,24 @@
+#!/bin/bash
+
+file="big-zip-files.zip"  # 這裡改成你的第一個 zip 檔案
+
+while [[ -f "$file" ]]; do
+    echo "解壓縮檔案: $file"
+    
+    # 解壓縮到 extracted 資料夾
+    unzip -o "$file" -d extracted
+
+    # 找 extracted 裡的 zip 檔（第一個）
+    new_zip=$(find extracted -type f -name "*.zip" | head -n 1)
+
+    if [[ -z "$new_zip" ]]; then
+        echo "沒有更多 zip 檔，解壓完成。"
+        break
+    else
+        echo "發現下一層 zip：$new_zip，繼續解壓..."
+        file="$new_zip"
+    fi
+done
+
+
+grep -ri "pico" ~/kok/CTF/Big\ Zip
