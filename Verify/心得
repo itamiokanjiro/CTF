@@ -1,6 +1,0 @@
-sha256sum files/* | grep 03b52eabed517324828b9e09cbbf8a7b0911f348f76cf989ba6d51acede6d5d8
-
-sha256sum files/* | grep 55b983afdd9d10718f1db3983459efc5cc3f5a66841e2651041e25dec3efd46
-
-files/2cdcb2de
-./decrypt.sh files/2cdcb2de
