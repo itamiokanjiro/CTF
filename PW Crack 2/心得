@@ -1,2 +1,0 @@
-echo -e "\x34\x65\x63\x39"
-python3 level2.py

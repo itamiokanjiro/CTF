@@ -1,0 +1,8 @@
+git log 
+git log --perl-regexp --author='^(?!picoCTF <ops@picoctf\.com>).*$'
+
+git switch --detach b562f0b425907789d11d2fe2793e67592dc6be93
+git switch master
+
+git switch feature/part-1
+git branch
