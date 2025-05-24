@@ -1,0 +1,8 @@
+npx hexo server
+npx hexo server -i 0.0.0.0 -p 4000
+npm install -g hexo-cli
+npm install hexo-theme-reimu --save
+git clone https://github.com/D-Sketon/reimu-template
+npx hexo g
+
+git clone https://github.com/D-Sketon/hexo-theme-reimu.git
